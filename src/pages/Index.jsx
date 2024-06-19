@@ -1,13 +1,18 @@
 import { Container, Text, VStack, Textarea, Button, Box } from "@chakra-ui/react";
+import { getFeedback } from '../api/openai';
 import { useState } from "react";
 
 const Index = () => {
   const [inputText, setInputText] = useState("");
   const [feedback, setFeedback] = useState("");
 
-  const handleSubmit = () => {
-    // Placeholder for the submit action
-    setFeedback("Feedback will be displayed here.");
+  const handleSubmit = async () => {
+    try {
+      const feedbackResponse = await getFeedback(inputText);
+      setFeedback(feedbackResponse);
+    } catch (error) {
+      setFeedback('Error fetching feedback. Please try again later.');
+    }
   };
 
   return (
