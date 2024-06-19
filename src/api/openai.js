@@ -3,7 +3,7 @@ import OpenAI from 'openai';
 const openai = new OpenAI({
   baseURL: 'https://api.gptengineer.app/openai',
   dangerouslyAllowBrowser: true,
-  apiKey: process.env.PROJECT_ID,
+  apiKey: 'random-string-123456',
 });
 
 export const getFeedback = async (inputText) => {
