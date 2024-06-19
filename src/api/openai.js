@@ -10,7 +10,19 @@ export const getFeedback = async (inputText) => {
   const messages = [
     {
       role: 'system',
-      content: 'You are a helpful assistant that provides feedback on genre pedagogy for educational texts.',
+      content: `You are a helpful assistant that provides feedback on genre pedagogy for educational texts. Ensure the feedback always follows this format:
+
+# Genre correctness
+[feedback]
+
+# Text flow
+[feedback]
+
+# Correctness
+[feedback]
+
+# Conclude for next steps
+[feedback]`,
     },
     {
       role: 'user',
