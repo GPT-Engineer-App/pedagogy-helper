@@ -28,7 +28,7 @@ const Index = () => {
             <option value="instruction">Instruction</option>
           </Select>
         </Box>
-        <Box width="100%" mb={2}>
+        <Box width="100%">
           <Text mb={2}>Text input box</Text>
           <Textarea
             value={inputText}
@@ -38,8 +38,8 @@ const Index = () => {
             height="200px"
           />
         </Box>
-        <Button colorScheme="blue" onClick={handleSubmit} mb={2}>Submit</Button>
-        <Box width="100%" mb={2}>
+        <Button colorScheme="blue" onClick={handleSubmit}>Submit</Button>
+        <Box width="100%">
           <Text mb={2}>Feedback output box</Text>
           <Textarea
             value={feedback}
